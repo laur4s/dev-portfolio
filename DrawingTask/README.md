@@ -2,7 +2,7 @@
 
 This assignment is about drawing a circle or an arbitrary .svg file on a whiteboard. A Universal Robots UR10e robot with a 3D printed Marker holder as a tool was used.
 
-![setup.jpeg](setup.jpeg)
+![setup.jpeg](./DrawingTask/setup.jpeg)
 
 It is possible to select a custom .svg file, change its size by setting the size and specify the location on the drawing board where the image should be drawn.
 
@@ -32,8 +32,8 @@ Furthermore we assured that the image cannot be drawn outside the drawing board 
 
 
 4. Running
-    - In RoboDK create a robot program of the python file by right-clicking on the python file in the RoboDK file-tree. This is only possible if we include the following code line after initializing and specifying the robot:
-    ```RDK.setRunMode(robolink.RUNMODE_MAKE_ROBOTPROG)```
+    - In RoboDK create a robot program of the python file by right-clicking on the python file in the RoboDK file-tree. This is only possible if we include the following code line after initializing and specifying the robot:  
+    ```RDK.setRunMode(robolink.RUNMODE_MAKE_ROBOTPROG)```  
     By setting **GENERATE_ROBOT_PROGRAM** to True in the code settings this is done automatically.
     - Now a .script and .urp file are created
     - Import the .urp on the robot and run the program  
@@ -48,6 +48,4 @@ Adjusting the pentip decreast overall drawing quality as can be seen in these tw
 
 ------
 Authors:  
-Laura Schiller (03797770),  
-Raimund Lau (03806149),  
-Maximilian Reif (03671189)
+Laura, Raimund, Maximilian
