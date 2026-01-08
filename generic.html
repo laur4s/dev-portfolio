@@ -11,6 +11,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Ensures images in your README don't overflow the page */
+			#markdown-container img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+				margin: 2em auto;
+			}
+			/* Adds some spacing to headers inside the README */
+			#markdown-container h1, #markdown-container h2 {
+				border-bottom: solid 1px #ddd;
+				padding-bottom: 0.5em;
+				margin-top: 1.5em;
+			}
+			/* Style for code blocks if you have code in your README */
+			#markdown-container pre {
+				background: #f4f4f4;
+				padding: 1em;
+				overflow-x: auto;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -25,18 +46,37 @@
 
 				<!-- Main -->
 					<div id="main">
-
-						<!-- Content -->
-							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-							</section>
-
+						<section id="content" class="main">
+							<div id="markdown-container">
+								<p>Loading project details...</p>
+							</div>
+						</section>
 					</div>
+					
+					<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+					
+					<script>
+						// 1. Get the project folder name from the URL (?project=DrawingTask)
+						const urlParams = new URLSearchParams(window.location.search);
+						const projectName = urlParams.get('project') || 'Project1'; // Default to Project1 if none found
+					
+						// 2. Fetch the specific README
+						fetch(`./${projectName}/README.md`)
+							.then(response => {
+								if (!response.ok) throw new Error(`Could not find README at ./${projectName}/README.md`);
+								return response.text();
+							})
+							.then(text => {
+								document.getElementById('markdown-container').innerHTML = marked.parse(text);
+								
+								// Update the Header H1 to the project name
+								document.querySelector('#header h1').innerText = projectName.replace(/([A-Z])/g, ' $1').trim();
+							})
+							.catch(err => {
+								document.getElementById('markdown-container').innerHTML = 
+									`<p style="color:red;">Error: ${err.message}. <br>Make sure the folder name matches exactly.</p>`;
+							});
+					</script>
 
 				<!-- Footer -->
 					<footer id="footer">
