@@ -4,7 +4,7 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
 
 ### Picture of the task board:  
 
-![board setup](./Taskboard/task-board.jpeg)
+![board setup](./TaskBoard/task-board.jpeg)
 
 ### Challenge description:  
 **Board detection:** First detect the task board inside the camera frame.   
@@ -20,7 +20,7 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
     - This project is only working in **simulation** and was not tested on the real robot yet.
 
     Here the whole setup and also the starting configuration of the robot can be seen:  
-    ![board general setup](./Taskboard/setup-task-board.jpeg)
+    ![board general setup](./TaskBoard/setup-task-board.jpeg)
 
 
 2. Preparation
@@ -58,7 +58,7 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
 **Board Detection**
 The camera is able to detect the red and blue button of the taskboard and publishes the coordinates on two different topics. In rviz the detections as well as the taskboard bounding box can be visualized: 
 
-![board detections](./Taskboard/taskboard_with_buttons.jpeg)
+![board detections](./TaskBoard/taskboard_with_buttons.jpeg)
 
 **Speed Test**
 Also the robot controller part is already existing and implemented with moveit. It can be called via a service which then starts the movement of the robot in simulation. Therefore we can ensure that all dependencies and topics are loaded/subscribed/published correctly before even moving the robot.
@@ -95,13 +95,13 @@ Examples:
 
 
 Here you see a video of the robot motion in simulation:
-<video src="./Taskboard/taskboard-exercise.mp4" width="600" controls>
+<video src="./TaskBoard/taskboard-exercise.mp4" width="600" controls>
   Your browser does not support the video tag.
 </video>
 
-![board exercise](./Taskboard/taskboard-exercise.mp4)
+![board exercise](./TaskBoard/taskboard-exercise.mp4)
 
-[![Watch the video](./Taskboard/task-board.jpeg)](./Taskboard/taskboard-exercise.mp4)
+[![Watch the video](./TaskBoard/task-board.jpeg)](./TaskBoard/taskboard-exercise.mp4)
 
 <br></br>
 
