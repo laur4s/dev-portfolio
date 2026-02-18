@@ -26,7 +26,7 @@ For that a Franka Research 3 robot is used holding a 3D printed tool, covered in
     - **Attention**: This is only necessary if you want to manually open or close the gripper. Otherwise proceed with **4.**, here all necessary steps are included already for executing the task.
     - Open the gripper: ```./build/libfranka/examples/grasp_object 172.16.0.10 0 0.06```
     - Place the cleaning tool to one tip of the gripper (see red box in the image). Press it carefully to the tip and it should hold itself. Do not hold the tool in your hand when the robot moves for your own safety.   <br>
-      ![franka_erasing_gripper.jpeg](./Impedance-controlTask/franka_erasing_gripper.jpeg){: width="50%"}
+      ![franka_erasing_gripper.jpeg](./Impedance-controlTask/franka_erasing_gripper.jpeg)
     - Close the gripper with the cleaning tool inside: ```./build/libfranka/examples/grasp_object 172.16.0.10 0 0.006```
     - Additional information: The command for opening and closing was used from the already existing grasp_object of the libfranka examples. As arguments the robot-id is necessary as well as the distance from the center of the tool towards the tool tips in meters.  
 

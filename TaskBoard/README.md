@@ -95,16 +95,13 @@ Examples:
 
 
 Here you see a video of the robot motion in simulation:
-<video src="./TaskBoard/taskboard-exercise.mp4" controls>
+<video src="./TaskBoard/taskboard-exercise.mp4" style="width: 50%; height: auto;" controls>
   Your browser does not support the video tag.
 </video>
 
-![taskboard-exercise.mp4](./TaskBoard/taskboard-exercise.mp4)
 
 [![task-board.jpeg](./TaskBoard/task-board.jpeg)](./TaskBoard/taskboard-exercise.mp4)
 
-[![taskboard-exercise](./TaskBoard/task-board.jpeg)](./TaskBoard/taskboard-exercise.mp4)
-*Click the image above to view the video*
 
 <br></br>
 

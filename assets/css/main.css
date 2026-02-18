@@ -2376,6 +2376,10 @@ input, select, textarea {
 
 /* Image */
 
+	img[alt="franka_erasing_gripper.jpeg"] {
+		width: 50% !important;
+		height: auto;
+	}
 	.image {
 		border-radius: 8px;
 		border: 0;
