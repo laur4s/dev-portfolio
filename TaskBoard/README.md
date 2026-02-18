@@ -4,9 +4,7 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
 
 ### Picture of the task board:  
 
-| Image | |
-| :--- | :--- |
-|  ![task-board.jpeg](./TaskBoard/task-board.jpeg) | |
+<img src="./TaskBoard/task-board.jpeg" alt="taskboard" width="70%">
 
 
 ### Challenge description:  
@@ -23,9 +21,7 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
     - This project is only working in **simulation** and was not tested on the real robot yet.
 
     Here the whole setup and also the starting configuration of the robot can be seen:  
-    | Image | |
-    | :--- | :--- |
-    |  ![setup-task-board.jpeg](./TaskBoard/setup-task-board.jpeg) | |
+    <img src="./TaskBoard/setup-task-board.jpeg" alt="taskboard setup" width="70%">
     
 
 2. Preparation
