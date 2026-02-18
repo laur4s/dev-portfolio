@@ -3,7 +3,10 @@
 This assignment is about teaching a robot a motion along a surface and then execute this movement to erase a previously drawn image.
 For that a Franka Research 3 robot is used holding a 3D printed tool, covered in cloth to clean and polish the drawing surface of a dry-erase whiteboard. 
 
-![franka_erasing_setup.jpeg](./Impedance-controlTask/franka_erasing_setup.jpeg)
+| Image | |
+| :--- | :--- |
+|  ![franka_erasing_setup.jpeg](./Impedance-controlTask/franka_erasing_setup.jpeg) | |
+
 
 <br></br>
 ### Getting started: 

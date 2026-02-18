@@ -4,7 +4,10 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
 
 ### Picture of the task board:  
 
-![task-board.jpeg](./TaskBoard/task-board.jpeg)
+| Image | |
+| :--- | :--- |
+|  ![task-board.jpeg](./TaskBoard/task-board.jpeg) | |
+
 
 ### Challenge description:  
 **Board detection:** First detect the task board inside the camera frame.   
@@ -20,8 +23,10 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
     - This project is only working in **simulation** and was not tested on the real robot yet.
 
     Here the whole setup and also the starting configuration of the robot can be seen:  
-    ![setup-task-board.jpeg](./TaskBoard/setup-task-board.jpeg)
-
+    | Image | |
+    | :--- | :--- |
+    |  ![setup-task-board.jpeg](./TaskBoard/setup-task-board.jpeg) | |
+    
 
 2. Preparation
     - Setup the environment by sourcing following file: ```source /opt/ros/jazzy/setup.bash```
@@ -95,6 +100,7 @@ Examples:
 
 
 Here you see a video of the robot motion in simulation:  
+  
 <video src="./TaskBoard/taskboard-exercise.mp4" style="width: 60%; height: auto;" controls>
   Your browser does not support the video tag.
 </video>
