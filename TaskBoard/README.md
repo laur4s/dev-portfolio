@@ -94,13 +94,10 @@ Examples:
     - Both values are same -> robot waits
 
 
-Here you see a video of the robot motion in simulation:
-<video src="./TaskBoard/taskboard-exercise.mp4" style="width: 50%; height: auto;" controls>
+Here you see a video of the robot motion in simulation:  
+<video src="./TaskBoard/taskboard-exercise.mp4" style="width: 60%; height: auto;" controls>
   Your browser does not support the video tag.
 </video>
-
-
-[![task-board.jpeg](./TaskBoard/task-board.jpeg)](./TaskBoard/taskboard-exercise.mp4)
 
 
 <br></br>
