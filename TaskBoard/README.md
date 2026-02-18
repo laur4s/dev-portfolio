@@ -103,6 +103,9 @@ Here you see a video of the robot motion in simulation:
 
 [![task-board.jpeg](./TaskBoard/task-board.jpeg)](./TaskBoard/taskboard-exercise.mp4)
 
+[![taskboard-exercise](./TaskBoard/task-board.jpeg)](./TaskBoard/taskboard-exercise.mp4)
+*Click the image above to view the video*
+
 <br></br>
 
 ### Issues that still need to be addressed in the future
