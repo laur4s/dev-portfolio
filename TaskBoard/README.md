@@ -17,7 +17,7 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
 ### Getting started: 
 1. Code source:
     - This project uses [ROS2 jazzy](https://docs.ros.org/en/jazzy/index.html). It is only tested with jazzy, using humble might cause some errors that need to be fixed individually
-    - We cloned the repository from the [Franka Github](https://github.com/frankarobotics/franka_ros2) with the commit **#7ef0ab0**. Also make sure to have libfranka installed.
+    - We cloned the [franka_ros2 repository](https://github.com/frankarobotics/franka_ros2). Make sure to have libfranka installed.
     - This project is only working in **simulation** and was not tested on the real robot yet.
 
     Here the whole setup and also the starting configuration of the robot can be seen:  
@@ -31,7 +31,7 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
     - Build the workspace (outside your src folder): ```colcon build --symlink-install``` (later only ```colcon build --packages-select franka_bringup taskboard_exercise``` is sufficient)
     - In each terminal:
         - Source the setup.bash from the install folder: ```source install/setup.bash``` 
-        - Change the RMW implementation and use FastRTPS intead of CycloneDDS: ```export RMW_IMPLEMENTATION=rmw_fastrtps_cpp```    
+        - Make sure to use FastRTPS as your rmw implementation: ```export RMW_IMPLEMENTATION=rmw_fastrtps_cpp```  
 
 
 3. Task execution:
@@ -107,7 +107,7 @@ Here you see a video of the robot motion in simulation:
 ### Issues that still need to be addressed in the future
 Improvements in simulation:  
 - **Inlcude gripper control**: The gripper of the robot in simulation is currently not controlled and therefore shakes a little bit and also opens and closes randomly during the movement.  
-
+- **Improve PID control values**: The PID values for the robotic control can be further improved and tuned.
 
 Testing on real hardware:
 - **Robot motion discontinuity error:** The real robot exceeded some acceleration limits in real time, therefore an even smoother function than just linear interpolation between the start and target position has to be used. 
