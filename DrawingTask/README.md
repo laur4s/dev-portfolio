@@ -39,8 +39,8 @@ Furthermore we assured that the image cannot be drawn outside the drawing board 
     - Import the .urp on the robot and run the program  
 
 
-An example of the robot drawing can be seen in [this video](https://youtu.be/z7hvwAJxzuY) and [in this video](https://www.youtube.com/watch?v=bLJ4T0XL7Vg).
-Adjusting the pentip decreast overall drawing quality as can be seen in these two videos.  [this video](https://www.youtube.com/watch?v=UC3RvJ7HVww) and  [this video](https://www.youtube.com/watch?v=6Q-JkP-9h6Y)
+Examples of the robot drawing can be seen in: [Video 1](https://youtu.be/z7hvwAJxzuY), [Video 2](https://www.youtube.com/watch?v=bLJ4T0XL7Vg).
+After adjusting the pentip perpendicular to the board: [Video 3](https://www.youtube.com/watch?v=UC3RvJ7HVww), [Video 4](https://www.youtube.com/watch?v=6Q-JkP-9h6Y)
 
    
 ### Happy drawing!  

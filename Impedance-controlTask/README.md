@@ -1,7 +1,7 @@
 # IMPL Assignment Erasing
 
 This assignment is about teaching a robot a motion along a surface and then execute this movement to erase a previously drawn image.
-For that a Franka Research 3 robot is used holding a 3D printed tool, covered in cloth to clean and polish the drawing surface of a dry-erase whiteboard. 
+For that a Franka Research 3 robot is used holding a 3D printed stamp, covered in cloth to clean and polish the drawing surface of a dry-erase whiteboard. 
 
 <img src="./Impedance-controlTask/franka_erasing_setup.jpeg" alt="erasing setup" width="70%">
 
@@ -79,7 +79,7 @@ Based on the joint_impedance_controller we created two new controller for teachi
             - 10.0
             - 4.0
 
-            This change makes it easier for teaching to move the robot to the right positions. These values do not have to be exatly our values or changed at all. We just found these values good for manually moving the robot. We made the last two stiffer, that we can hold the robot at the gripper, while moving it.
+            This change makes it easier to move the robot to the right positions during the teaching phase. These values do not have to be exatly our values or changed at all. We just found these values good for manually moving the robot. We made the last two stiffer, that we can hold the robot at the gripper, while moving it.
 
 
 2. impl_group1_erasing_exec

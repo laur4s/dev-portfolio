@@ -12,15 +12,20 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
 **Speed test:** The robot has to press the blue button, then release it and as fast as possible press the red button.  
 **Light test:** After release of the red button, one arbitrary button (either red or blue) is illuminated and the robot has to press it.
 
-<br></br>
+<br />
 
 ### Getting started: 
 1. Code source:
     - This project uses [ROS2 jazzy](https://docs.ros.org/en/jazzy/index.html). It is only tested with jazzy, using humble might cause some errors that need to be fixed individually
-    - We cloned the [franka_ros2 repository](https://github.com/frankarobotics/franka_ros2). Make sure to have libfranka installed.
-    - This project is only working in **simulation** and was not tested on the real robot yet.
+    - We cloned the [franka_ros2 repository](https://github.com/frankarobotics/franka_ros2). Make sure to have libfranka installed.    
+    
+    <br />
 
-    Here the whole setup and also the starting configuration of the robot can be seen:  
+    **Note:** This project is only working in **simulation** and was not tested on the real robot yet.
+    This is the case because working on the actual robot and debugging was very time-consuming. Due to the occurrence of motion discontinuity errors and the limited time available for accessing the hardware, we had no choice but to test the code in the simulation environment.  
+    <br />
+
+    Here the whole original setup and also the starting configuration of the robot can be seen: 
     <img src="./TaskBoard/setup-task-board.jpeg" alt="taskboard setup" width="70%">
     
 
@@ -45,7 +50,7 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
         ```ros2 launch taskboard_exercise complete_mock_taskboard_exercise.launch.py```
 
     - **Some verification tests:**  
-        - In rviz add the topic camera/color/image_raw/Image for the "mock-live" rgb_image of the taskboard
+        - In RViz add the topic camera/color/image_raw/Image for the "mock-live" rgb_image of the taskboard
         and the detection_debug_image/Image topic to see the detected buttons and taskboard  
         - Open ```rqt_graph``` in another terminal and verify whether all topics and nodes exist and are connected properly   
         - Open ```ros2 run rqt_tf_tree rqt_tf_tree``` and verify whether there is an existing (and connected) transformation from the base frame of the robot to the camera_link (otherwise make naming adjustments in the coordinate_extraction_ros and complete_mock_taskboard_exercise)
@@ -57,12 +62,14 @@ This assignment is about developing a program for a Franka FR3 robot equipped wi
 
 ### Completed Tasks
 **Board Detection**
-The camera is able to detect the red and blue button of the taskboard and publishes the coordinates on two different topics. In rviz the detections as well as the taskboard bounding box can be visualized: 
+The camera attached to the real robot is able to detect the red and blue button of the taskboard and publishes the coordinates on two different topics. In RViz the detections as well as the taskboard bounding box can be visualized: 
 
 ![taskboard_with_buttons.jpeg](./TaskBoard/taskboard_with_buttons.jpeg)
 
+For testing the robot movement in simulation we use a static camera image and publish it continuously. 
+
 **Speed Test**
-Also the robot controller part is already existing and implemented with moveit. It can be called via a service which then starts the movement of the robot in simulation. Therefore we can ensure that all dependencies and topics are loaded/subscribed/published correctly before even moving the robot.
+Also the robot controller part is already existing and implemented with moveit (only tested in simulation). It can be called via a service which then starts the movement of the robot in simulation. Therefore we can ensure that all dependencies and topics are loaded/subscribed/published correctly before even moving the robot.
 
 However, this part still needs to be tested on the actual robot. Probably adjustments need to be made because the robot is controlled via effort and the PID values are so far only tuned for the robot in simulation.
 
@@ -98,7 +105,7 @@ Examples:
 Here you see a video of the robot motion in simulation:  
   
 <video src="./TaskBoard/taskboard-exercise.mp4" style="width: 60%; height: auto;" controls>
-  Your browser does not support the video tag.
+  Your browser does not support the video tag. Please get in contact to recieve the video.
 </video>
 
 
@@ -120,5 +127,5 @@ Testing on real hardware:
 <br></br>
 
 ------
-Authors:  
+Author:  
 Laura

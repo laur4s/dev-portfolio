@@ -45,6 +45,9 @@
 
 				<!-- Main -->
 					<div id="main">
+						<ul class="actions">
+							<li><a href="index.html" class="button icon solid fa-chevron-left">Back</a></li>
+						</ul>
 						<section id="content" class="main">
 							<div id="markdown-container">
 								<p>Loading project details...</p>
@@ -111,5 +114,31 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+	<a href="#header" class="button icon solid fa-chevron-up" id="top-button"
+			style="position: fixed; 
+				   bottom: 2rem; 
+				   right: 2rem; 
+				   z-index: 1000; 
+				   border-radius: 8px; 
+				   padding: 0 1.5rem;   
+				   height: 3rem; 
+				   line-height: 3rem; 
+				   text-align: center;
+				   background-color: #f4f4f4; 
+				   color: #585858 !important; /* Text Color */
+				   border: 1px solid rgba(144, 144, 144, 0.25);
+				   box-shadow: none;
+				   font-weight: inherit;">
+			
+			<style>
+				/* This targets the icon specifically to match the 'Back' button icon color */
+				#top-button::before {
+					color: rgba(144, 144, 144, 0.75) !important; /* Matching the template's icon opacity */
+					margin-right: 0.5rem;
+				}
+			</style>
+		 
+			<span style="color: #585858; font-weight: inherit; text-transform: inherit;">Top</span>
+	</a>
 	</body>
 </html>
